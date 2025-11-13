@@ -4,6 +4,7 @@ import { AboutSection } from "@/sections/About";
 import { GallerySection } from "@/sections/Gallery";
 import { BuyPortalSection } from "@/sections/BuyPortal";
 import { TokenomicsSection } from "@/sections/Tokenomics";
+import { RoadmapSection } from "@/sections/Roadmap";
 import ComicMarquee from "@/components/ComicMarquee";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <GallerySection />
         <BuyPortalSection />
         <TokenomicsSection />
+        <RoadmapSection />
       </main>
 
       {/* Footer */}
