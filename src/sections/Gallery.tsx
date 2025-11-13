@@ -203,7 +203,7 @@ export function GallerySection() {
               Tygo Sketchbook
             </h2>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-black/70 sm:text-base">
-              Art drops, animation frames, dan visual jungle yang bikin timeline bergetar.
+              ART DROPS, ANIMATION FRAMES, AND JUNGLE VISUALS THAT IGNITE EVERY FEED.
             </p>
           </div>
 
