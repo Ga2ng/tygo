@@ -115,12 +115,12 @@ export default function Home() {
         <ComicMarquee />
         <GallerySection />
         <BuyPortalSection />
-        <></>
+        {/* <></> */}
 
         <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 pb-28 pt-16 sm:px-10 lg:px-12">
 
           {/* Tokenomics */}
-          {/* <section id="tokenomics" className="tygo-shell">
+          <section id="tokenomics" className="tygo-shell">
             <div className="tygo-shell-content space-y-10">
               <div className="flex flex-col gap-3 text-center sm:text-left">
                 <span className="tygo-badge self-center sm:self-start">Tygonomics</span>
@@ -160,10 +160,10 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-          </section> */}
+          </section>
 
           {/* Exchanges */}
-          {/* <section className="tygo-shell">
+          <section className="tygo-shell">
             <div className="tygo-shell-content space-y-8">
               <div className="text-center sm:text-left">
                 <span className="tygo-badge mb-3 self-center sm:self-start">Listings</span>
@@ -189,7 +189,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </section> */}
+          </section>
 
           {/* Market Cap & Build Goals */}
           {/* <section className="tygo-shell">

@@ -199,9 +199,6 @@ export function GallerySection() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-16 sm:px-10 lg:max-w-7xl lg:px-12 lg:py-20">
         <div className="flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:items-end sm:text-left">
           <div className="max-w-2xl space-y-4">
-            <span className="inline-flex items-center gap-2 rounded-full border-4 border-black bg-black px-5 py-2 text-xs font-black uppercase tracking-[0.35em] text-[#FF8B00] shadow-[6px_6px_0_rgba(0,0,0,1)]">
-              Gallery
-            </span>
             <h2 className="text-4xl font-black uppercase sm:text-5xl lg:text-6xl">
               Tygo Sketchbook
             </h2>
