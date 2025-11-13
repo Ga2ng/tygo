@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/sections/Hero";
 import { AboutSection } from "@/sections/About";
+import { GallerySection } from "@/sections/Gallery";
 import ComicMarquee from "@/components/ComicMarquee";
 
 const exchanges = [
@@ -111,6 +112,7 @@ export default function Home() {
 
         <AboutSection />
         <ComicMarquee />
+        <GallerySection />
 
         <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 pb-28 pt-16 sm:px-10 lg:px-12">
 
