@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/sections/Hero";
+import { AboutSection } from "@/sections/About";
+import ComicMarquee from "@/components/ComicMarquee";
 
 const exchanges = [
   { name: "DEXSCREENER", href: "https://dexscreener.com" },
@@ -107,56 +109,10 @@ export default function Home() {
       <main className="relative">
         <Hero />
 
-        <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 pb-28 pt-16 sm:px-10 lg:px-12">
-          {/* About Section */}
-          {/* <section id="about" className="tygo-shell">
-            <div className="tygo-shell-content grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-              <div className="space-y-6">
-                <h2 className="text-4xl font-black text-[#FF8B00] sm:text-5xl">About $TYGO</h2>
-                <p className="text-base leading-relaxed text-white/85 sm:text-lg">
-                  Deep in Solana’s jungle, Tygo was born feral—built to sniff liquidity, flip paper,
-                  and roar louder than volatility. He hunts alpha, gambles with ice in his veins, and
-                  only sleeps when the treasury is heavier than yesterday.
-                </p>
-                <p className="text-base leading-relaxed text-white/80 sm:text-lg">
-                  This isn&apos;t just a meme—it's a cross-media IP. World-class art, daily animation
-                  drops, and a mascot that drags Solana culture into the mainstream. We turn FOMO into
-                  rituals, lore into content, and fans into cultists.
-                </p>
-                <a
-                  href="https://drive.google.com/drive/folders/1cZ9OR9kU3KoMM3a-mzk1KFlwGALg7ddq?usp=driv_e_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#ff9302]/65 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-[#ff9302] transition-all hover:bg-[#ff9302] hover:text-black"
-                >
-                  🎨 Browse the gallery
-                </a>
-              </div>
+        <AboutSection />
+        <ComicMarquee />
 
-              <div className="tygo-highlight space-y-5">
-                <h3 className="text-2xl font-bold text-[#ff9302]">Mission</h3>
-                <p className="text-sm leading-relaxed text-white/85 sm:text-base">
-                  Turn Tygo into the most viral mascot on Solana—bridging memes, animation, and
-                  mainstream culture. We’re building a content machine that keeps degens entertained,
-                  inspired, and irrationally bullish.
-                </p>
-                <ul className="space-y-3 text-sm text-white/80">
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1 text-[#ff9302]">⚡</span>
-                    Daily art drops, lore and animated shorts that feed the cult.
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1 text-[#ff9302]">🎬</span>
-                    Original IP designed for collabs, merch, and media expansion.
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-1 text-[#ff9302]">🌐</span>
-                    A bridge between meme energy and mainstream attention.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section> */}
+        <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 pb-28 pt-16 sm:px-10 lg:px-12">
 
           {/* Tokenomics */}
           {/* <section id="tokenomics" className="tygo-shell">
