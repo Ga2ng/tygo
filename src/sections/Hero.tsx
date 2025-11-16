@@ -21,8 +21,8 @@ const socials = [
 
 export function Hero() {
   return (
-<>
-<section className="relative min-h-screen w-full overflow-hidden">
+    <>
+      <section className="relative w-full overflow-hidden lg:min-h-screen">
         <Image
           src="/images/main_BG.png"
           alt="Jungle background"
@@ -32,22 +32,22 @@ export function Hero() {
           className="object-cover"
           unoptimized
         />
-        <div className="relative mx-auto flex min-h-screen w-full max-w-[1400px] flex-col-reverse items-center justify-center gap-4 px-4 py-8 text-center sm:gap-6 sm:px-8 sm:py-12 md:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-10 lg:py-16 lg:text-left">
-          {/* Mascot - Left Side */}
-          <div className="flex w-full justify-center lg:w-auto lg:justify-start">
+        <div style={{padding: '0px' }} className="lg:mt-16 mt-20 sm:mt-18 md:mt-20 min-[1528px]:mt-9 relative mx-auto flex w-full max-w-[2100px] flex-col-reverse items-center justify-between gap-4 px-4 pt-4 pb-0 text-center sm:gap-4 sm:px-8 sm:pt-6 sm:pb-0 md:gap-6 lg:flex-row lg:min-h-[70vh] min-[1528px]:min-h-screen lg:items-end lg:justify-between lg:gap-12 lg:px-10 lg:pb-0 lg:text-left">
+          {/* Mascot - Left Side (second on mobile, left on desktop) */}
+          <div className="flex w-full justify-center mt-auto lg:w-auto lg:justify-start lg:self-end">
             <Image
               src="/images/mascot.gif"
               alt="$TYGO mascot"
-              width={820}
-              height={820}
+              width={900}
+              height={900}
               unoptimized
               priority
-              className="h-auto w-[280px] sm:w-[400px] md:w-[520px] lg:w-[680px] xl:w-[820px]"
+              className="h-auto w-[320px] sm:w-[440px] md:w-[520px] lg:w-[600px] min-[1528px]:w-[780px] xl:w-[820px]"
             />
           </div>
 
-          {/* Text Content - Right Side */}
-          <div className="relative w-full max-w-xl lg:w-auto lg:max-w-[34rem]">
+          {/* Text Content - Right Side (first on mobile, right on desktop) */}
+          <div className="relative w-full max-w-xl lg:w-auto lg:max-w-[30rem] min-[1528px]:max-w-[34rem] lg:-translate-x-6 min-[1528px]:-translate-x-52 xl:-translate-x-10 2xl:-translate-x-16 lg:self-end lg:mb-0 min-[1528px]:mb-12">
             <div className="relative rounded-2xl px-4 py-6 text-black sm:rounded-3xl sm:px-5 sm:py-8 lg:rounded-[28px] lg:px-6 lg:py-12 ">
               <h1
                 className="space-y-1 font-black leading-[0.94] drop-shadow-[6px_6px_0_rgba(0,0,0,0.45)] sm:space-y-2 sm:drop-shadow-[9px_9px_0_rgba(0,0,0,0.45)] comic-shadow-light"
@@ -55,8 +55,8 @@ export function Hero() {
               >
                 <span className="block">$TYGO</span>
               </h1>
-              <p className="mt-3 text-left text-sm font-bold leading-relaxed text-[#000] readable-contrast sm:mt-4 sm:text-base md:text-lg lg:mt-5 lg:text-[1.25rem] xl:text-[1.55rem]">
-                The Solana jungle&apos;s loudest mascot—built for speed, art, and pure degen energy.
+              <p className="mt-3 text-center text-sm font-bold leading-relaxed text-[#000] readable-contrast sm:mt-4 sm:text-base md:text-lg lg:mt-5 lg:text-left lg:text-[1.25rem] xl:text-[1.55rem]">
+                Wild degen born in the crypto jungle
               </p>
               <div className="mt-5 sm:mt-6 space-y-4">
                 <div className="flex justify-center lg:justify-start">
