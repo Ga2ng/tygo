@@ -10,11 +10,6 @@
   --tygo-card-border: rgba(255, 147, 2, 0.18);
 }
 
-/* Google Font: Luckiest Guy for comic-style headers */
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
-/* Google Font: Freeman for paragraph text */
-@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
-
 @layer base {
   body {
     font-family: "Freeman", var(--font-body), system-ui, -apple-system, sans-serif;
