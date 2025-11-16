@@ -32,7 +32,7 @@ export function Hero() {
           className="object-cover"
           unoptimized
         />
-        <div className="relative mx-auto flex min-h-screen w-full max-w-[1400px] flex-col items-center justify-center gap-4 px-4 py-8 text-center sm:gap-6 sm:px-8 sm:py-12 md:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-10 lg:py-16 lg:text-left">
+        <div className="relative mx-auto flex min-h-screen w-full max-w-[1400px] flex-col-reverse items-center justify-center gap-4 px-4 py-8 text-center sm:gap-6 sm:px-8 sm:py-12 md:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-10 lg:py-16 lg:text-left">
           {/* Mascot - Left Side */}
           <div className="flex w-full justify-center lg:w-auto lg:justify-start">
             <Image
