@@ -1,33 +1,44 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Buy", href: "#buy-tygo" },
   { label: "Tokenomics", href: "#tokenomics" },
+  { label: "Roadmap", href: "#roadmap" },
   { label: "How to Buy", href: "#how-to-buy" },
 ];
 
 export function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center bg-transparent">
-      <div className="relative mt-4 w-[calc(100%-1.5rem)] max-w-5xl">
-        <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl bg-black" aria-hidden />
-        <nav className="relative flex items-center justify-between rounded-2xl border-4 border-black bg-[#ff9302] px-5 py-3 text-black shadow-[0_10px_0_rgba(0,0,0,0.65)]">
-          <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full border-3 border-black bg-[#ffe066] shadow-[3px_3px_0_rgba(0,0,0,0.5)]">
+      <div className="relative mt-4 w-full px-3 sm:px-6 overflow-visible">
+        {/* <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl bg-black" aria-hidden /> */}
+        <nav className="relative flex w-full items-center justify-between rounded-2xl border-4 border-black bg-[#ff9302] px-5 py-3 text-black shadow-[0_10px_0_rgba(0,0,0,0.65)] max-[360px]:px-3">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border-3 border-black bg-[#ffe066] shadow-[3px_3px_0_rgba(0,0,0,0.5)] sm:h-11 sm:w-11 shrink-0">
               <Image
                 src="/images/logo.jpg"
                 alt="$TYGO logo"
                 width={30}
                 height={30}
-                className="h-8 w-8 rounded-full object-cover"
+                className="h-7 w-7 rounded-full object-cover sm:h-8 sm:w-8"
                 priority
               />
             </div>
-            <span className="text-xl font-black uppercase tracking-[0.4em]">$TYGO</span>
+            <span className="truncate text-lg font-black uppercase tracking-[0.3em] max-[360px]:tracking-[0.12em] sm:text-xl sm:tracking-[0.4em]">
+              $TYGO
+            </span>
           </div>
 
-          <div className="hidden items-center gap-5 text-sm font-black uppercase tracking-[0.35em] md:flex">
+          <div className="hidden items-center gap-5 text-sm font-black uppercase tracking-[0.35em] lg:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -46,7 +57,48 @@ export function Navbar() {
               Buy $TYGO
             </Link>
           </div>
+
+          <button
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
+            className="lg:hidden inline-flex items-center justify-center rounded-full border-2 border-black bg-white/90 p-2 shadow-[0_6px_0_rgba(0,0,0,0.55)] transition-transform hover:-translate-y-0.5"
+          >
+            {open ? <FiX className="h-5 w-5" /> : <FiMenu className="h-5 w-5" />}
+          </button>
         </nav>
+
+        <div
+          className={`relative mt-2 px-3 lg:hidden transition-all duration-300 ease-out ${
+            open
+              ? "opacity-100 translate-y-0 max-h-[500px] pointer-events-auto"
+              : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"
+          }`}
+        >
+          <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl bg-black max-[360px]:translate-x-1 max-[360px]:translate-y-1" aria-hidden />
+          <div className={`relative overflow-hidden rounded-2xl border-4 border-black bg-[#ff9302] p-3 shadow-[0_10px_0_rgba(0,0,0,0.65)] transition-all duration-300 ${open ? "scale-100" : "scale-[0.98]"}`}>
+            <div className="grid grid-cols-2 gap-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="flex items-center justify-center rounded-xl border-2 border-black bg-white/90 px-3 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black shadow-[0_5px_0_rgba(0,0,0,0.55)] transition-transform duration-200 hover:-translate-y-0.5"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="https://pump.fun"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+                className="col-span-2 flex items-center justify-center rounded-xl border-3 border-black bg-[#1a4d2e] px-3 py-2 text-xs font-black uppercase tracking-[0.25em] text-white shadow-[0_6px_0_rgba(0,0,0,0.6)] transition-transform duration-200 hover:-translate-y-0.5"
+              >
+                Buy $TYGO
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );
