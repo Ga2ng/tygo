@@ -123,7 +123,6 @@ const galleryRows: GalleryRow[] = [
         content: {
           type: "video",
           src: "/videos/wake_tg.mp4",
-          // poster: "/images/fire_tygo.gif",
           alt: "Tygo wake sequence",
         },
       },
@@ -193,16 +192,16 @@ const galleryRows: GalleryRow[] = [
   },
 ];
 
-export function GallerySection() {
+export default function GallerySection() {
   return (
     <section id="gallery" className="relative bg-[#FF8B00] text-black">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-16 sm:px-10 lg:max-w-7xl lg:px-12 lg:py-20">
-        <div className="flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:items-end sm:text-left">
-          <div className="max-w-2xl space-y-4">
-            <h2 className="text-4xl font-black uppercase sm:text-5xl lg:text-6xl">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-10 sm:gap-10 sm:px-10 sm:py-16 lg:max-w-7xl lg:px-12 lg:py-20">
+        <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:items-end sm:gap-6 sm:text-left">
+          <div className="max-w-2xl space-y-2 sm:space-y-4">
+            <h2 className="text-3xl font-black uppercase sm:text-5xl lg:text-6xl">
               Tygo Sketchbook
             </h2>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-black/70 sm:text-base">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-black/70 sm:text-sm sm:tracking-[0.2em] lg:text-base">
               ART DROPS, ANIMATION FRAMES, AND JUNGLE VISUALS THAT IGNITE EVERY FEED.
             </p>
           </div>
@@ -211,29 +210,27 @@ export function GallerySection() {
             href="https://drive.google.com/drive/folders/1cZ9OR9kU3KoMM3a-mzk1KFlwGALg7ddq?usp=driv_e_link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-full border-4 border-black bg-white px-6 py-3 text-sm font-black uppercase tracking-[0.25em] text-black shadow-[8px_8px_0_rgba(0,0,0,1)] transition-transform hover:-translate-y-1 hover:shadow-[12px_12px_0_rgba(0,0,0,1)]"
+            className="inline-flex items-center gap-2 rounded-full border-3 border-black bg-white px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-black shadow-[4px_4px_0_rgba(0,0,0,1)] transition-transform hover:-translate-y-1 hover:shadow-[6px_6px_0_rgba(0,0,0,1)] sm:gap-3 sm:border-4 sm:px-6 sm:py-3 sm:text-sm sm:tracking-[0.25em] sm:shadow-[8px_8px_0_rgba(0,0,0,1)] sm:hover:shadow-[12px_12px_0_rgba(0,0,0,1)]"
           >
             View Full Archive ↗
           </a>
         </div>
 
-        <div className="space-y-8">
+        {/* Mobile & Tablet Layout */}
+        <div className="space-y-3 lg:hidden">
           {galleryRows.map((row, rowIndex) => (
-            <div
-              key={`gallery-row-${rowIndex}`}
-              className="grid grid-cols-2 auto-rows-[1fr] gap-2 sm:grid-cols-4 sm:gap-3 lg:grid-cols-12 lg:gap-6"
-            >
+            <div key={`mobile-row-${rowIndex}`} className="space-y-3">
               {row.columns.map((column, colIndex) => {
                 if (column.kind === "stack") {
                   return (
                     <div
-                      key={`gallery-col-${rowIndex}-${colIndex}`}
-                      className={`${column.spanClass} grid grid-cols-2 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-1 lg:gap-4`}
+                      key={`mobile-col-${rowIndex}-${colIndex}`}
+                      className="grid grid-cols-2 gap-2 sm:gap-3"
                     >
                       {column.items.map((item, itemIndex) => (
                         <div
-                          key={`stack-item-${rowIndex}-${colIndex}-${itemIndex}`}
-                          className={`${itemIndex === column.items.length - 1 ? "col-span-2 sm:col-span-2 lg:col-span-1" : "col-span-1"}`}
+                          key={`mobile-item-${rowIndex}-${colIndex}-${itemIndex}`}
+                          className={itemIndex === column.items.length - 1 ? "col-span-2" : ""}
                         >
                           <GalleryCard
                             content={item.content}
@@ -246,9 +243,48 @@ export function GallerySection() {
                 }
 
                 return (
+                  <div key={`mobile-col-${rowIndex}-${colIndex}`}>
+                    <GalleryCard
+                      content={column.content}
+                      aspectClass={column.aspectClass}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden space-y-8 lg:block">
+          {galleryRows.map((row, rowIndex) => (
+            <div
+              key={`desktop-row-${rowIndex}`}
+              className="grid grid-cols-12 gap-6"
+            >
+              {row.columns.map((column, colIndex) => {
+                if (column.kind === "stack") {
+                  return (
+                    <div
+                      key={`desktop-col-${rowIndex}-${colIndex}`}
+                      className={`${column.spanClass} flex flex-col gap-4`}
+                    >
+                      {column.items.map((item, itemIndex) => (
+                        <div key={`desktop-item-${rowIndex}-${colIndex}-${itemIndex}`}>
+                          <GalleryCard
+                            content={item.content}
+                            aspectClass={item.aspectClass}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  );
+                }
+
+                return (
                   <div
-                    key={`gallery-col-${rowIndex}-${colIndex}`}
-                    className={`${column.spanClass}`}
+                    key={`desktop-col-${rowIndex}-${colIndex}`}
+                    className={column.spanClass}
                   >
                     <GalleryCard
                       content={column.content}
@@ -272,16 +308,16 @@ type GalleryCardProps = {
 
 function GalleryCard({ content, aspectClass }: GalleryCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-[28px] border-4 border-black bg-white shadow-[6px_6px_0_rgba(0,0,0,1)] transition-all duration-200 sm:shadow-[8px_8px_0_rgba(0,0,0,1)] lg:shadow-[10px_10px_0_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-none">
+    <div className="group relative overflow-hidden rounded-xl border-3 border-black bg-white shadow-[3px_3px_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-none sm:rounded-[20px] sm:shadow-[6px_6px_0_rgba(0,0,0,1)] lg:rounded-[28px] lg:border-4 lg:shadow-[10px_10px_0_rgba(0,0,0,1)]">
       <div className={`relative w-full ${aspectClass}`}>
         {content.type === "image" ? (
           <Image
             src={content.src}
             alt={content.alt}
             fill
-            unoptimized={content.unoptimized}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            sizes="100vw"
+            unoptimized={Boolean((content as any).unoptimized)}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           />
         ) : (
           <>
@@ -294,7 +330,7 @@ function GalleryCard({ content, aspectClass }: GalleryCardProps) {
               loop
               playsInline
             />
-            <span className="absolute left-5 top-5 rounded-full border-3 border-black bg-[#FF8B00] px-4 py-1 text-xs font-black uppercase tracking-[0.35em] text-black shadow-[4px_4px_0_rgba(0,0,0,1)]">
+            <span className="absolute left-3 top-3 rounded-full border-2 border-black bg-[#FF8B00] px-2.5 py-0.5 text-[9px] font-black uppercase tracking-[0.25em] text-black shadow-[2px_2px_0_rgba(0,0,0,1)] sm:left-4 sm:top-4 sm:border-3 sm:px-3 sm:py-1 sm:text-[10px] sm:tracking-[0.3em] sm:shadow-[3px_3px_0_rgba(0,0,0,1)] lg:left-5 lg:top-5 lg:px-4 lg:text-xs lg:tracking-[0.35em] lg:shadow-[4px_4px_0_rgba(0,0,0,1)]">
               Motion
             </span>
           </>

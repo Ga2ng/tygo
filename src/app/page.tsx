@@ -1,10 +1,10 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/sections/Hero";
-import { AboutSection } from "@/sections/About";
-import { GallerySection } from "@/sections/Gallery";
-import { BuyPortalSection } from "@/sections/BuyPortal";
+import AboutSection from "@/sections/About";
+import GallerySection from "@/sections/Gallery";
+import BuyPortalSection from "@/sections/BuyPortal";
 import { TokenomicsSection } from "@/sections/Tokenomics";
-import { RoadmapSection } from "@/sections/Roadmap";
+import RoadmapSection  from "@/sections/Roadmap";
 import { HowToBuySection } from "@/sections/HowToBuy";
 import { FooterSection } from "@/sections/Footer";
 import ComicMarquee from "@/components/ComicMarquee";
@@ -19,7 +19,7 @@ export default function Home() {
 
         <AboutSection />
         <ComicMarquee />
-        <GallerySection />
+        <GallerySection/>
         <BuyPortalSection />
         <TokenomicsSection />
         <RoadmapSection />

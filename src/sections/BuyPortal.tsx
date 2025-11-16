@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 type ExchangeItem = {
   name: string;
@@ -10,10 +9,10 @@ type ExchangeItem = {
 };
 
 const exchanges: ExchangeItem[] = [
-  { name: "DEXSCREENER", href: "https://dexscreener.com", icon: "/images/logo/dexscreener.png" },
-  { name: "DEXTOOLS", href: "https://www.dextools.io", icon: "/images/logo/dextools.png" },
-  { name: "JUPITER", href: "https://jup.ag", icon: "/images/logo/jupiter.png", maxWidth: 240 },
-  { name: "PUMPFUN", href: "https://pump.fun", icon: "/images/logo/pumpfun.png", maxWidth: 240 },
+  { name: "DEXSCREENER", href: "https://dexscreener.com", icon: "/images/logo/dexscreener.png", maxWidth: 200 },
+  { name: "DEXTOOLS", href: "https://www.dextools.io", icon: "/images/logo/dextools.png", maxWidth: 200 },
+  { name: "JUPITER", href: "https://jup.ag", icon: "/images/logo/jupiter.png", maxWidth: 260 },
+  { name: "PUMPFUN", href: "https://pump.fun", icon: "/images/logo/pumpfun.png", maxWidth: 320 },
   { name: "OKX DEX", href: "https://www.okx.com/web3/dex", icon: "/images/logo/okx.png", maxWidth: 260 },
   { name: "GATE IO", href: "https://www.gate.io", icon: "/images/logo/gateio.png" },
   { name: "KUCOIN", href: "https://www.kucoin.com", icon: "/images/logo/kucoin.png" },
@@ -25,57 +24,60 @@ const exchanges: ExchangeItem[] = [
 
 function ExchangeCard({ exchange }: { exchange: ExchangeItem }) {
   return (
-    <Link
-      key={exchange.name}
+    <a
       href={exchange.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex h-24 items-center justify-center rounded-full transform scale-90 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-none sm:scale-95 md:scale-100"
+      className="group flex h-16 items-center justify-center rounded-full transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-none sm:h-20 lg:h-24"
     >
       <div
-        className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border-3 border-black bg-[#FF8B00] px-6"
+        className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border-3 border-black bg-[#FF8B00] px-3 shadow-[3px_3px_0_rgba(0,0,0,1)] transition-shadow hover:shadow-none sm:px-4 lg:px-6 sm:shadow-[4px_4px_0_rgba(0,0,0,1)]"
       >
         <span
-          className="pointer-events-none absolute inset-0 rounded-full]"
-          aria-hidden
+          className="pointer-events-none absolute inset-0 rounded-full"
+          aria-hidden="true"
         />
         {exchange.icon ? (
-          <Image
-            src={exchange.icon}
-            alt={`${exchange.name} logo`}
-            width={exchange.maxWidth ?? 220}
-            height={70}
-            className="relative object-contain drop-shadow-[0_0_14px_rgba(0,0,0,0.25)]"
+          <div
+            className="relative h-full"
             style={{ maxWidth: (exchange.maxWidth ?? 220) + "px", width: "100%" }}
-          />
+          >
+            <Image
+              src={exchange.icon}
+              alt={`${exchange.name} logo`}
+              fill
+              sizes="(min-width:1024px) 240px, 50vw"
+              className="object-contain drop-shadow-[0_0_14px_rgba(0,0,0,0.25)]"
+            />
+          </div>
         ) : (
-          <span className="relative text-base font-black uppercase tracking-[0.25em] text-[#0b160f] drop-shadow-[0_2px_4px_rgba(255,255,255,0.2)]">
+          <span className="relative text-xs font-black uppercase tracking-[0.2em] text-[#0b160f] drop-shadow-[0_2px_4px_rgba(255,255,255,0.2)] sm:text-sm sm:tracking-[0.25em] lg:text-base">
             {exchange.name}
           </span>
         )}
       </div>
-    </Link>
+    </a>
   );
 }
 
-export function BuyPortalSection() {
+export default function BuyPortalSection() {
   return (
-    <section id="buy-tygo" className="relative py-14 text-white">
-      <div className="absolute inset-0 border-y-4 border-black" aria-hidden />
-      <div className="relative mx-auto flex w-full flex-col gap-10 px-4 md:px-20 pb-20">
-        <div className="flex flex-col gap-4 text-center sm:text-left">
-          <h2 className="text-4xl font-black uppercase text-[#FF8B00] sm:text-5xl lg:text-6xl">
+    <section id="buy-tygo" className="relative bg-black py-10 text-white sm:py-14 lg:py-16">
+      <div className="absolute inset-0 border-y-3 border-black sm:border-y-4" aria-hidden="true" />
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 sm:gap-8 sm:px-6 md:px-10 lg:gap-10 lg:px-12">
+        <div className="flex flex-col gap-3 text-center sm:gap-4 sm:text-left">
+          <h2 className="text-3xl font-black uppercase text-[#FF8B00] sm:text-4xl lg:text-6xl">
             Buy $TYGO On Any Jungle Outpost
           </h2>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70 sm:text-base">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/70 sm:text-sm sm:tracking-[0.2em] lg:text-base">
             Tap the exchange, smash the trade, join the roar. Solid colors. Solid gains.
           </p>
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-[#FF8B00]">
+          <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#FF8B00] sm:text-xs sm:tracking-[0.35em]">
             AND THEN ADD IN BLURRY
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:grid-cols-4 lg:gap-4">
           {exchanges.map((exchange) => (
             <ExchangeCard key={exchange.name} exchange={exchange} />
           ))}
@@ -84,5 +86,3 @@ export function BuyPortalSection() {
     </section>
   );
 }
-
-export default BuyPortalSection;
