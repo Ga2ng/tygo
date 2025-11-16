@@ -39,7 +39,7 @@ export function Hero() {
               >
                 <span className="block">$TYGO</span>
               </h1>
-              <p className="mt-3 text-left text-sm font-bold leading-relaxed text-[#112d1d] sm:mt-4 sm:text-base md:text-lg lg:mt-5 lg:text-[1.25rem] xl:text-[1.55rem]">
+              <p className="mt-3 text-left text-sm font-bold leading-relaxed text-[#000] drop-shadow-[0_1px_0_#FF8B00,2px_2px_0_#000] sm:mt-4 sm:text-base md:text-lg lg:mt-5 lg:text-[1.25rem] xl:text-[1.55rem]">
                 <span className="font-black uppercase">$TYGO</span> lives on the razor&apos;s edge—trading,
                 gambling, and roaring whenever the Solana jungle trembles. Fast, fearless, and obsessed
                 with stacking more, <span className="font-black uppercase">$TYGO</span> flips FOMO into

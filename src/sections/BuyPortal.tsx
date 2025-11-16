@@ -17,9 +17,9 @@ const exchanges: ExchangeItem[] = [
   { name: "GATE IO", href: "https://www.gate.io", icon: "/images/logo/gateio.png" },
   { name: "KUCOIN", href: "https://www.kucoin.com", icon: "/images/logo/kucoin.png" },
   { name: "REVOLUT", href: "https://www.revolut.com", icon: "/images/logo/revoult.png", maxWidth: 220 },
-  { name: "LBANK", href: "https://www.lbank.com", icon: "/images/logo/lbank.png", maxWidth: 240 },
+  { name: "LBANK", href: "https://www.lbank.com", icon: "/images/logo/lbank.png", maxWidth: 260 },
   { name: "COINBASE", href: "https://www.coinbase.com", icon: "/images/logo/coinbase.png" },
-  { name: "BINANCE", href: "https://www.binance.com", icon: "/images/logo/binance.png" },
+  { name: "BINANCE", href: "https://www.binance.com", icon: "/images/logo/binance.png", maxWidth: 260 },
 ];
 
 function ExchangeCard({ exchange }: { exchange: ExchangeItem }) {
@@ -39,14 +39,15 @@ function ExchangeCard({ exchange }: { exchange: ExchangeItem }) {
         />
         {exchange.icon ? (
           <div
-            className="relative h-full"
-            style={{ maxWidth: (exchange.maxWidth ?? 220) + "px", width: "100%" }}
+            className="relative h-full w-full"
+            style={{ maxWidth: (exchange.maxWidth ?? 220) + "px", minWidth: "80px" }}
           >
             <Image
               src={exchange.icon}
               alt={`${exchange.name} logo`}
               fill
-              sizes="(min-width:1024px) 240px, 50vw"
+              sizes="(min-width:1024px) 260px, (min-width:640px) 200px, 160px"
+              unoptimized
               className="object-contain drop-shadow-[0_0_14px_rgba(0,0,0,0.25)]"
             />
           </div>
