@@ -47,7 +47,7 @@ function GoalList({ title, goals }: { title: string; goals: GoalItem[] }) {
         {goals.map((goal) => (
           <div
             key={goal.label}
-            className="group flex items-center gap-3 rounded-2xl border-3 border-black bg-white p-3 text-black shadow-[4px_4px_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_rgba(0,0,0,1)] sm:gap-4 sm:rounded-3xl sm:border-4 sm:p-4"
+            className="group flex items-center gap-3 rounded-2xl border-3 border-black bg-white p-3 text-black shadow-[4px_4px_0_rgba(0,0,0,1)] transition-all duration-200 hover:translate-y-2 hover:shadow-[2px_2px_0_rgba(0,0,0,1)] sm:gap-4 sm:rounded-3xl sm:border-4 sm:p-4"
           >
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border-2 border-black bg-[#FF8B00] text-xl text-black shadow-[2px_2px_0_rgba(0,0,0,1)] sm:h-12 sm:w-12 sm:rounded-2xl sm:border-3 sm:text-2xl sm:shadow-[3px_3px_0_rgba(0,0,0,1)]">
               {goal.icon}

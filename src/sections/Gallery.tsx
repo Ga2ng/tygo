@@ -210,7 +210,7 @@ export default function GallerySection() {
             href="https://drive.google.com/drive/folders/1cZ9OR9kU3KoMM3a-mzk1KFlwGALg7ddq?usp=driv_e_link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border-3 border-black bg-white px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-black shadow-[4px_4px_0_rgba(0,0,0,1)] transition-transform hover:-translate-y-1 hover:shadow-[6px_6px_0_rgba(0,0,0,1)] sm:gap-3 sm:border-4 sm:px-6 sm:py-3 sm:text-sm sm:tracking-[0.25em] sm:shadow-[8px_8px_0_rgba(0,0,0,1)] sm:hover:shadow-[12px_12px_0_rgba(0,0,0,1)]"
+            className="inline-flex items-center gap-2 rounded-full border-3 border-black bg-white px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-black shadow-[4px_4px_0_rgba(0,0,0,1)] transition-all duration-200 hover:translate-y-2 hover:shadow-[2px_2px_0_rgba(0,0,0,1)] sm:gap-3 sm:border-4 sm:px-6 sm:py-3 sm:text-sm sm:tracking-[0.25em] sm:shadow-[8px_8px_0_rgba(0,0,0,1)] sm:hover:shadow-[4px_4px_0_rgba(0,0,0,1)]"
           >
             View Full Archive ↗
           </a>

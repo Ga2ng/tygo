@@ -43,14 +43,14 @@ export function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="whitespace-nowrap rounded-full border-2 border-black bg-white/90 px-3 py-1.5 text-black shadow-[0_6px_0_rgba(0,0,0,0.55)] transition-transform hover:-translate-y-1 hover:shadow-[0_10px_0_rgba(0,0,0,0.6)] xl:px-4 xl:py-2 2xl:px-5"
+                className="whitespace-nowrap rounded-full border-2 border-black bg-white/90 px-3 py-1.5 text-black shadow-[0_6px_0_rgba(0,0,0,0.55)] transition-all duration-200 hover:translate-y-2 hover:shadow-[0_3px_0_rgba(0,0,0,0.55)] xl:px-4 xl:py-2 2xl:px-5"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="https://pump.fun"
-              className="whitespace-nowrap rounded-full border-3 border-black bg-[#1a4d2e] px-4 py-1.5 text-white shadow-[0_8px_0_rgba(0,0,0,0.6)] transition-transform hover:-translate-y-1 hover:shadow-[0_12px_0_rgba(0,0,0,0.7)] font-freeman xl:px-5 xl:py-2 2xl:px-6"
+              className="whitespace-nowrap rounded-full border-3 border-black bg-[#1a4d2e] px-4 py-1.5 text-white shadow-[0_8px_0_rgba(0,0,0,0.6)] transition-all duration-200 hover:translate-y-2 hover:shadow-[0_4px_0_rgba(0,0,0,0.6)] font-freeman xl:px-5 xl:py-2 2xl:px-6"
               target="_blank"
               rel="noreferrer"
             >
@@ -61,7 +61,7 @@ export function Navbar() {
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden inline-flex items-center justify-center rounded-full border-2 border-black bg-white/90 p-2 shadow-[0_6px_0_rgba(0,0,0,0.55)] transition-transform hover:-translate-y-0.5"
+            className="lg:hidden inline-flex items-center justify-center rounded-full border-2 border-black bg-white/90 p-2 shadow-[0_6px_0_rgba(0,0,0,0.55)] transition-all duration-200 hover:translate-y-2 hover:shadow-[0_3px_0_rgba(0,0,0,0.55)]"
           >
             {open ? <FiX className="h-5 w-5" /> : <FiMenu className="h-5 w-5" />}
           </button>
@@ -82,7 +82,7 @@ export function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-center rounded-xl border-2 border-black bg-white/90 px-3 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black shadow-[0_5px_0_rgba(0,0,0,0.55)] transition-transform duration-200 hover:-translate-y-0.5"
+                  className="flex items-center justify-center rounded-xl border-2 border-black bg-white/90 px-3 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black shadow-[0_5px_0_rgba(0,0,0,0.55)] transition-all duration-200 hover:translate-y-2 hover:shadow-[0_2px_0_rgba(0,0,0,0.55)]"
                 >
                   {link.label}
                 </Link>
@@ -92,7 +92,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setOpen(false)}
-                className="col-span-2 flex items-center justify-center rounded-xl border-3 border-black bg-[#1a4d2e] px-3 py-2 text-xs font-black uppercase tracking-[0.25em] text-white shadow-[0_6px_0_rgba(0,0,0,0.6)] transition-transform duration-200 hover:-translate-y-0.5"
+                className="col-span-2 flex items-center justify-center rounded-xl border-3 border-black bg-[#1a4d2e] px-3 py-2 text-xs font-black uppercase tracking-[0.25em] text-white shadow-[0_6px_0_rgba(0,0,0,0.6)] transition-all duration-200 hover:translate-y-2 hover:shadow-[0_3px_0_rgba(0,0,0,0.6)]"
               >
                 Buy $TYGO
               </Link>
