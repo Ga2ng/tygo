@@ -21,36 +21,36 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center bg-transparent">
       <div className="relative mt-4 w-full px-3 sm:px-6 overflow-visible">
         {/* <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl bg-black" aria-hidden /> */}
-        <nav className="relative flex w-full items-center justify-between rounded-2xl border-4 border-black bg-[#ff9302] px-5 py-3 text-black shadow-[0_10px_0_rgba(0,0,0,0.65)] max-[360px]:px-3">
-          <div className="flex min-w-0 items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border-3 border-black bg-[#ffe066] shadow-[3px_3px_0_rgba(0,0,0,0.5)] sm:h-11 sm:w-11 shrink-0">
+        <nav className="relative flex w-full items-center justify-between rounded-2xl border-4 border-black bg-[#ff9302] px-4 py-2.5 text-black shadow-[0_10px_0_rgba(0,0,0,0.65)] max-[360px]:px-3 lg:px-5 lg:py-3">
+          <div className="flex min-w-0 items-center gap-2 lg:gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full border-3 border-black bg-[#ffe066] shadow-[3px_3px_0_rgba(0,0,0,0.5)] sm:h-10 sm:w-10 lg:h-11 lg:w-11 shrink-0">
               <Image
                 src="/images/logo.jpg"
                 alt="$TYGO logo"
                 width={30}
                 height={30}
-                className="h-7 w-7 rounded-full object-cover sm:h-8 sm:w-8"
+                className="h-6 w-6 rounded-full object-cover sm:h-7 sm:w-7 lg:h-8 lg:w-8"
                 priority
               />
             </div>
-            <span className="truncate text-lg font-black uppercase tracking-[0.3em] max-[360px]:tracking-[0.12em] sm:text-xl sm:tracking-[0.4em] font-luckiest">
+            <span className="truncate text-base font-black uppercase tracking-[0.2em] max-[360px]:tracking-[0.12em] sm:text-lg sm:tracking-[0.3em] lg:text-xl lg:tracking-[0.4em] font-luckiest">
               $TYGO
             </span>
           </div>
 
-          <div className="hidden items-center gap-5 text-sm font-black uppercase tracking-[0.35em] lg:flex font-freeman">
+          <div className="hidden items-center gap-3 text-xs font-black uppercase tracking-[0.25em] xl:gap-4 xl:text-sm xl:tracking-[0.3em] 2xl:gap-5 2xl:tracking-[0.35em] lg:flex font-freeman">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="rounded-full border-2 border-black bg-white/90 px-5 py-2 text-black shadow-[0_6px_0_rgba(0,0,0,0.55)] transition-transform hover:-translate-y-1 hover:shadow-[0_10px_0_rgba(0,0,0,0.6)]"
+                className="whitespace-nowrap rounded-full border-2 border-black bg-white/90 px-3 py-1.5 text-black shadow-[0_6px_0_rgba(0,0,0,0.55)] transition-transform hover:-translate-y-1 hover:shadow-[0_10px_0_rgba(0,0,0,0.6)] xl:px-4 xl:py-2 2xl:px-5"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="https://pump.fun"
-              className="rounded-full border-3 border-black bg-[#1a4d2e] px-6 py-2 text-white shadow-[0_8px_0_rgba(0,0,0,0.6)] transition-transform hover:-translate-y-1 hover:shadow-[0_12px_0_rgba(0,0,0,0.7)] font-freeman"
+              className="whitespace-nowrap rounded-full border-3 border-black bg-[#1a4d2e] px-4 py-1.5 text-white shadow-[0_8px_0_rgba(0,0,0,0.6)] transition-transform hover:-translate-y-1 hover:shadow-[0_12px_0_rgba(0,0,0,0.7)] font-freeman xl:px-5 xl:py-2 2xl:px-6"
               target="_blank"
               rel="noreferrer"
             >
