@@ -27,7 +27,7 @@ export function FooterSection() {
             <span className="inline-flex items-center gap-3 rounded-full border-4 border-black bg-white px-6 py-2 text-xs font-black uppercase tracking-[0.35em] text-black shadow-[5px_5px_0_rgba(0,0,0,1)]">
               Our social media will be
             </span>
-            <h2 className="text-4xl font-black uppercase text-[#FF8B00] sm:text-5xl">
+            <h2 className="text-4xl font-black uppercase text-[#FF8B00] sm:text-5xl comic-shadow-light">
               Link Up With The Jungle
             </h2>
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/70 sm:text-base">

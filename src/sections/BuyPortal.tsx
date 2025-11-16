@@ -67,7 +67,7 @@ export default function BuyPortalSection() {
       <div className="absolute inset-0 border-y-3 border-black sm:border-y-4" aria-hidden="true" />
       <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 sm:gap-8 sm:px-6 md:px-10 lg:gap-10 lg:px-12">
         <div className="flex flex-col gap-3 text-center sm:gap-4 sm:text-left">
-          <h2 className="text-3xl font-black uppercase text-[#FF8B00] sm:text-4xl lg:text-6xl">
+          <h2 className="text-3xl font-black uppercase text-[#FF8B00] sm:text-4xl lg:text-6xl comic-shadow-light">
             Buy $TYGO On Any Jungle Outpost
           </h2>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-white/70 sm:text-sm sm:tracking-[0.2em] lg:text-base">

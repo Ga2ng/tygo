@@ -46,7 +46,7 @@ export function HowToBuySection() {
           <span className="inline-flex items-center gap-3 self-center rounded-full border-4 border-black bg-white px-6 py-2 text-xs font-black uppercase tracking-[0.35em] text-black shadow-[5px_5px_0_rgba(0,0,0,1)] transition-all duration-200 hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[2px_2px_0_rgba(0,0,0,1)] sm:self-start">
             <Image src="/images/logo.jpg" alt="Logo" width={16} height={16} className="h-4 w-4 rounded-full object-cover" /> HOW TO BUY $TYGO
           </span>
-          <h2 className="text-4xl font-black uppercase sm:text-5xl lg:text-6xl max-[320px]:text-3xl">
+          <h2 className="text-4xl font-black uppercase sm:text-5xl lg:text-6xl max-[320px]:text-3xl comic-shadow-light">
             Step into the Jungle in Minutes
           </h2>
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-black/80 sm:text-base">

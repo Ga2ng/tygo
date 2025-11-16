@@ -34,12 +34,12 @@ export function Hero() {
           <div className="relative w-full max-w-xl lg:w-auto lg:max-w-[34rem]">
             <div className="relative rounded-2xl px-4 py-6 text-black shadow-[0_12px_0_rgba(0,0,0,0.55)] sm:rounded-3xl sm:px-5 sm:py-8 lg:rounded-[28px] lg:px-6 lg:py-12 lg:shadow-[0_18px_0_rgba(0,0,0,0.55)]">
               <h1
-                className="space-y-1 font-black leading-[0.94] drop-shadow-[6px_6px_0_rgba(0,0,0,0.45)] sm:space-y-2 sm:drop-shadow-[9px_9px_0_rgba(0,0,0,0.45)]"
+                className="space-y-1 font-black leading-[0.94] drop-shadow-[6px_6px_0_rgba(0,0,0,0.45)] sm:space-y-2 sm:drop-shadow-[9px_9px_0_rgba(0,0,0,0.45)] comic-shadow-light"
                 style={{ fontSize: "clamp(3.5rem, 12vw, 8.4rem)", letterSpacing: "0.045em" }}
               >
                 <span className="block">$TYGO</span>
               </h1>
-              <p className="mt-3 text-left text-sm font-bold leading-relaxed text-[#000] drop-shadow-[0_1px_0_#FF8B00,2px_2px_0_#000] sm:mt-4 sm:text-base md:text-lg lg:mt-5 lg:text-[1.25rem] xl:text-[1.55rem]">
+              <p className="mt-3 text-left text-sm font-bold leading-relaxed text-[#000] drop-shadow-[0_1px_0_rgba(255,139,0,0.55),1px_1px_0_rgba(0,0,0,0.55)] sm:mt-4 sm:text-base md:text-lg lg:mt-5 lg:text-[1.25rem] xl:text-[1.55rem]">
                 <span className="font-black uppercase">$TYGO</span> lives on the razor&apos;s edge—trading,
                 gambling, and roaring whenever the Solana jungle trembles. Fast, fearless, and obsessed
                 with stacking more, <span className="font-black uppercase">$TYGO</span> flips FOMO into

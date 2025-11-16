@@ -10,26 +10,68 @@
   --tygo-card-border: rgba(255, 147, 2, 0.18);
 }
 
+/* Google Font: Luckiest Guy for comic-style headers */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+/* Google Font: Freeman for paragraph text */
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
 @layer base {
   body {
-    /* font-family: var(--font-body), system-ui, -apple-system, sans-serif;
-    background: radial-gradient(circle at 20% 20%, rgba(255, 147, 2, 0.08), transparent 55%),
-      radial-gradient(circle at 80% 0%, rgba(0, 163, 124, 0.08), transparent 50%), #010705;
-    color: #f5f7fa; */
+    font-family: "Freeman", var(--font-body), system-ui, -apple-system, sans-serif;
+    /* background and color were previously set here and commented out */
   }
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-title), "Bangers", "Impact", sans-serif;
+    font-family: "Luckiest Guy", var(--font-title), "Bangers", "Impact", system-ui, sans-serif;
     letter-spacing: 0.04em;
+    /* Softer comic shadow: lighter opacity and smaller offset */
+    text-shadow:
+      1px 1px 0 rgba(0, 0, 0, 0.55),
+      0 1px 0 rgba(255, 139, 0, 0.6);
+  }
+
+  p {
+    font-family: "Freeman", var(--font-body), system-ui, -apple-system, sans-serif;
+    letter-spacing: 0.01em;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  /* Font helpers for explicit usage */
+  .font-luckiest {
+    font-family: "Luckiest Guy", var(--font-title), "Bangers", "Impact", system-ui, sans-serif;
+  }
+  .font-freeman {
+    font-family: "Freeman", var(--font-body), system-ui, -apple-system, sans-serif;
+  }
+  /* Comic shadow variants for dark text on bright backgrounds */
+  .comic-shadow-light {
+    text-shadow:
+      -1px 0 rgba(255, 255, 255, 0.85),
+      1px 0 rgba(255, 255, 255, 0.85),
+      0 -1px rgba(255, 255, 255, 0.85),
+      0 1px rgba(255, 255, 255, 0.85),
+      1px 1px 0 rgba(255, 139, 0, 0.6);
+  }
+
+  /* Freeman helpers: make paragraph text pop with subtle outlines */
+  .freeman-outline-dark {
+    /* for dark text on bright bg (e.g., orange cards) */
+    text-shadow:
+      0 1px 0 rgba(0, 0, 0, 0.35),
+      1px 1px 0 rgba(0, 0, 0, 0.25);
+  }
+  .freeman-outline-light {
+    /* for light text on dark bg */
+    text-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.35),
+      1px 1px 0 rgba(255, 255, 255, 0.25);
   }
 /* 
   .tygo-shell {

@@ -24,7 +24,7 @@ export default function AboutSection() {
         <div className="grid w-full gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column */}
           <div className="flex flex-col justify-center space-y-6 sm:space-y-8">
-            <h2 className="text-4xl font-black uppercase text-[#FF8B00] sm:text-5xl lg:text-7xl">
+            <h2 className="text-4xl font-black uppercase text-[#FF8B00] sm:text-5xl lg:text-7xl comic-shadow-light">
               About $TYGO
             </h2>
             <div className="space-y-4 sm:space-y-6">
@@ -60,7 +60,7 @@ export default function AboutSection() {
             <div className="w-full space-y-6 sm:space-y-8">
               <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:gap-6 lg:gap-8">
                 <div className="flex flex-1 flex-col items-center gap-3 text-center sm:items-start sm:gap-4 sm:pt-6 sm:text-left lg:pt-14">
-                  <h3 className="text-3xl font-black uppercase text-[#FF8B00] sm:text-4xl lg:text-5xl">
+                  <h3 className="text-3xl font-black uppercase text-[#FF8B00] sm:text-4xl lg:text-5xl comic-shadow-light">
                     Mission
                   </h3>
                   <p className="text-base font-semibold leading-relaxed text-white sm:text-lg lg:text-xl">
@@ -83,23 +83,23 @@ export default function AboutSection() {
                 <li className="flex items-start gap-3 rounded-xl border-3 border-black bg-[#FF8B00] p-4 text-black shadow-[4px_4px_0_rgba(0,0,0,1)] sm:gap-4 sm:rounded-2xl sm:border-4 sm:p-5 sm:shadow-[6px_6px_0_rgba(0,0,0,1)]">
                   <span className="mt-1 inline-flex h-3 w-3 shrink-0 items-center justify-center rounded-full border-2 border-black bg-white sm:h-4 sm:w-4">
                   </span>
-                  <span className="font-black leading-relaxed">
+                  <p className="font-black leading-relaxed freeman-outline-dark">
                     Daily art drops, lore and animated shorts that feed the cult.
-                  </span>
+                  </p>
                 </li>
                 <li className="flex items-start gap-3 rounded-xl border-3 border-black bg-[#FF8B00] p-4 text-black shadow-[4px_4px_0_rgba(0,0,0,1)] sm:gap-4 sm:rounded-2xl sm:border-4 sm:p-5 sm:shadow-[6px_6px_0_rgba(0,0,0,1)]">
                   <span className="mt-1 inline-flex h-3 w-3 shrink-0 items-center justify-center rounded-full border-2 border-black bg-white sm:h-4 sm:w-4">
                   </span>
-                  <span className="font-black leading-relaxed">
+                  <p className="font-black leading-relaxed freeman-outline-dark">
                     Original IP designed for collabs, merch, and media expansion.
-                  </span>
+                  </p>
                 </li>
                 <li className="flex items-start gap-3 rounded-xl border-3 border-black bg-[#FF8B00] p-4 text-black shadow-[4px_4px_0_rgba(0,0,0,1)] sm:gap-4 sm:rounded-2xl sm:border-4 sm:p-5 sm:shadow-[6px_6px_0_rgba(0,0,0,1)]">
                   <span className="mt-1 inline-flex h-3 w-3 shrink-0 items-center justify-center rounded-full border-2 border-black bg-white sm:h-4 sm:w-4">
                   </span>
-                  <span className="font-black leading-relaxed">
+                  <p className="font-black leading-relaxed freeman-outline-dark">
                     A bridge between meme energy and mainstream attention.
-                  </span>
+                  </p>
                 </li>
               </ul>
             </div>

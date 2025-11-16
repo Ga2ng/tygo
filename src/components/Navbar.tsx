@@ -33,12 +33,12 @@ export function Navbar() {
                 priority
               />
             </div>
-            <span className="truncate text-lg font-black uppercase tracking-[0.3em] max-[360px]:tracking-[0.12em] sm:text-xl sm:tracking-[0.4em]">
+            <span className="truncate text-lg font-black uppercase tracking-[0.3em] max-[360px]:tracking-[0.12em] sm:text-xl sm:tracking-[0.4em] font-luckiest">
               $TYGO
             </span>
           </div>
 
-          <div className="hidden items-center gap-5 text-sm font-black uppercase tracking-[0.35em] lg:flex">
+          <div className="hidden items-center gap-5 text-sm font-black uppercase tracking-[0.35em] lg:flex font-freeman">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -50,7 +50,7 @@ export function Navbar() {
             ))}
             <Link
               href="https://pump.fun"
-              className="rounded-full border-3 border-black bg-[#1a4d2e] px-6 py-2 text-white shadow-[0_8px_0_rgba(0,0,0,0.6)] transition-transform hover:-translate-y-1 hover:shadow-[0_12px_0_rgba(0,0,0,0.7)]"
+              className="rounded-full border-3 border-black bg-[#1a4d2e] px-6 py-2 text-white shadow-[0_8px_0_rgba(0,0,0,0.6)] transition-transform hover:-translate-y-1 hover:shadow-[0_12px_0_rgba(0,0,0,0.7)] font-freeman"
               target="_blank"
               rel="noreferrer"
             >
@@ -76,7 +76,7 @@ export function Navbar() {
         >
           <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl bg-black max-[360px]:translate-x-1 max-[360px]:translate-y-1" aria-hidden />
           <div className={`relative overflow-hidden rounded-2xl border-4 border-black bg-[#ff9302] p-3 shadow-[0_10px_0_rgba(0,0,0,0.65)] transition-all duration-300 ${open ? "scale-100" : "scale-[0.98]"}`}>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-2 font-freeman">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}

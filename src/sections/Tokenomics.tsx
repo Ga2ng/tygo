@@ -48,7 +48,7 @@ export function TokenomicsSection() {
           <span className="inline-flex items-center gap-2 lg:gap-3 self-center rounded-full border-2 lg:border-4 border-black bg-white px-4 lg:px-6 py-1.5 lg:py-2 text-[10px] lg:text-xs font-black tracking-[0.25em] lg:tracking-[0.35em] shadow-[3px_3px_0_rgba(0,0,0,1)] lg:shadow-[5px_5px_0_rgba(0,0,0,1)] transition-all duration-200 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_rgba(0,0,0,1)] sm:self-start">
             <Image src="/images/logo.jpg" alt="Logo" width={16} height={16} className="h-4 w-4 lg:h-5 lg:w-5 rounded-full object-cover" /> TYGONOMICS
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black uppercase leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black uppercase leading-tight comic-shadow-light">
             Jungle Math That Never Folds
           </h2>
           <p className="text-[10px] sm:text-xs lg:text-base font-semibold uppercase tracking-[0.15em] lg:tracking-[0.25em] text-black/80">
