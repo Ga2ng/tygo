@@ -29,28 +29,46 @@ export default function AboutSection() {
             </h2>
             <div className="space-y-4 sm:space-y-6">
               <p className="text-lg font-bold leading-relaxed text-white sm:text-xl lg:text-2xl">
-                Deep in Solana's jungle, <span className="text-[#FF8B00]">$TYGO</span> was born feral—built
-                to sniff liquidity, flip paper, and roar louder than volatility.
+                In the heart of the crypto jungle, <span className="text-[#FF8B00]">$TYGO</span> the Tiger was born. A wild degen beast who lives on the edge and thrives in the chaos of Solana. He loves to trade and gamble, always chasing the next big opportunity, his favorite thing in the world is money.
               </p>
               <p className="text-base leading-relaxed text-white/90 sm:text-lg lg:text-xl">
-                This isn&apos;t just a meme—it's a cross-media IP. World-class art, daily animation drops, and a
-                mascot that drags Solana culture into the mainstream.
+                Fast, fearless, and always hungry for more, a beast who turns FOMO into fortune, fear into fuel, and roars when others panic.
               </p>
             </div>
-            <div className="space-y-2 sm:space-y-3">
-              <p className="text-xs font-black uppercase tracking-wider text-white/70 sm:text-sm">Contract Address</p>
-              <div className="flex flex-col gap-2 rounded-lg border-3 border-black bg-[#FF8B00] p-3 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:flex-row sm:items-center sm:gap-3 sm:border-4 sm:p-4 sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <code className="flex-1 overflow-x-auto break-all text-xs font-bold text-black sm:text-sm lg:text-base">
-                  TyG0xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX
-                </code>
-                <button
-                  onClick={() => {
-                    navigator.clipboard.writeText('TyG0xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX');
-                  }}
-                  className="w-full shrink-0 rounded border-2 border-black bg-white px-4 py-2 text-sm font-black uppercase text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none sm:w-auto sm:border-3"
-                >
-                  Copy
-                </button>
+            <div className="space-y-4 sm:space-y-6">
+              {/* Combined Card - Contract Address & Money Tygo Image */}
+              <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 rounded-xl sm:rounded-2xl border-3 sm:border-4 border-black bg-white p-4 sm:p-5 lg:p-6 shadow-[4px_4px_0_rgba(0,0,0,1)] sm:shadow-[6px_6px_0_rgba(0,0,0,1)] outline outline-2 outline-white sm:outline-[3px] transition-all duration-200 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_rgba(0,0,0,1)] sm:hover:shadow-[4px_4px_0_rgba(0,0,0,1)]">
+                {/* Contract Address Section */}
+                <div className="w-full space-y-2 sm:space-y-3">
+                  <p className="text-xs font-black uppercase tracking-wider text-black/70 sm:text-sm">Contract Address</p>
+                  <div className="flex flex-col gap-2 rounded-lg border-2 sm:border-3 border-black bg-[#FF8B00] p-3 sm:p-4">
+                    <code className="flex-1 overflow-x-auto break-all text-xs font-bold text-black sm:text-sm lg:text-base">
+                      TyG0xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX
+                    </code>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText('TyG0xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX');
+                      }}
+                      className="w-full shrink-0 rounded border-2 border-black bg-white px-4 py-2 text-sm font-black uppercase text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none sm:w-auto sm:border-3"
+                    >
+                      Copy
+                    </button>
+                  </div>
+                </div>
+                
+                {/* Money Tygo Image */}
+                <div className="relative w-full">
+                  <div className="relative rounded-lg sm:rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/money_tygo.jpg"
+                      alt="Money Tygo"
+                      width={400}
+                      height={400}
+                      className="w-full h-auto object-cover"
+                      unoptimized
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -68,36 +86,61 @@ export default function AboutSection() {
                     memes, animation, dan mainstream culture.
                   </p>
                 </div>
-                <div className="relative w-32 sm:w-40 lg:w-60">
-                  <Image
-                    src="/images/troll_tygo.gif"
-                    alt="Troll Tygo"
-                    width={240}
-                    height={240}
-                    unoptimized
-                    className="w-full h-auto"
-                  />
+                <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-0">
+                  <div className="relative w-32 sm:w-40 lg:w-60">
+                    <Image
+                      src="/images/troll_tygo.gif"
+                      alt="Troll Tygo"
+                      width={240}
+                      height={240}
+                      unoptimized
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* Mobile Only - Stacked Rotated GIFs */}
+                  <div className="lg:hidden flex flex-col gap-1 items-center">
+                    <div className="relative w-28 -rotate-12 -ml-6">
+                      <Image
+                        src="/images/chemical_tygo.gif"
+                        alt="Chemical Tygo"
+                        width={140}
+                        height={140}
+                        unoptimized
+                        className="w-full h-auto "
+                      />
+                    </div>
+                    <div className="relative w-28 rotate-12 -mr-6">
+                      <Image
+                        src="/images/dance_tygo.gif"
+                        alt="Dance Tygo"
+                        width={140}
+                        height={140}
+                        unoptimized
+                        className="w-full h-auto "
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <ul className="space-y-3 text-sm sm:space-y-4 sm:text-base lg:text-lg">
-                <li className="flex items-start gap-3 rounded-xl border-3 border-black bg-[#FF8B00] p-4 text-black shadow-[4px_4px_0_rgba(0,0,0,1)] sm:gap-4 sm:rounded-2xl sm:border-4 sm:p-5 sm:shadow-[6px_6px_0_rgba(0,0,0,1)]">
+                <li className="flex items-start gap-3 rounded-xl border-3 border-black bg-[#FF8B00] p-4 text-black outline outline-2 outline-white sm:gap-4 sm:rounded-2xl sm:border-4 sm:p-5 sm:outline-[3px]">
                   <span className="mt-1 inline-flex h-3 w-3 shrink-0 items-center justify-center rounded-full border-2 border-black bg-white sm:h-4 sm:w-4">
                   </span>
-                  <p className="font-black leading-relaxed freeman-outline-dark">
+                  <p className="font-black leading-relaxed text-black" style={{ textShadow: '-1px 0 #ffffff, 1px 0 #ffffff, 0 -1px #ffffff, 0 1px #ffffff' }}>
                     Daily art drops, lore and animated shorts that feed the cult.
                   </p>
                 </li>
-                <li className="flex items-start gap-3 rounded-xl border-3 border-black bg-[#FF8B00] p-4 text-black shadow-[4px_4px_0_rgba(0,0,0,1)] sm:gap-4 sm:rounded-2xl sm:border-4 sm:p-5 sm:shadow-[6px_6px_0_rgba(0,0,0,1)]">
+                <li className="flex items-start gap-3 rounded-xl border-3 border-black bg-[#FF8B00] p-4 text-black outline outline-2 outline-white sm:gap-4 sm:rounded-2xl sm:border-4 sm:p-5 sm:outline-[3px]">
                   <span className="mt-1 inline-flex h-3 w-3 shrink-0 items-center justify-center rounded-full border-2 border-black bg-white sm:h-4 sm:w-4">
                   </span>
-                  <p className="font-black leading-relaxed freeman-outline-dark">
+                  <p className="font-black leading-relaxed text-black" style={{ textShadow: '-1px 0 #ffffff, 1px 0 #ffffff, 0 -1px #ffffff, 0 1px #ffffff' }}>
                     Original IP designed for collabs, merch, and media expansion.
                   </p>
                 </li>
-                <li className="flex items-start gap-3 rounded-xl border-3 border-black bg-[#FF8B00] p-4 text-black shadow-[4px_4px_0_rgba(0,0,0,1)] sm:gap-4 sm:rounded-2xl sm:border-4 sm:p-5 sm:shadow-[6px_6px_0_rgba(0,0,0,1)]">
+                <li className="flex items-start gap-3 rounded-xl border-3 border-black bg-[#FF8B00] p-4 text-black outline outline-2 outline-white sm:gap-4 sm:rounded-2xl sm:border-4 sm:p-5 sm:outline-[3px]">
                   <span className="mt-1 inline-flex h-3 w-3 shrink-0 items-center justify-center rounded-full border-2 border-black bg-white sm:h-4 sm:w-4">
                   </span>
-                  <p className="font-black leading-relaxed freeman-outline-dark">
+                  <p className="font-black leading-relaxed text-black" style={{ textShadow: '-1px 0 #ffffff, 1px 0 #ffffff, 0 -1px #ffffff, 0 1px #ffffff' }}>
                     A bridge between meme energy and mainstream attention.
                   </p>
                 </li>
