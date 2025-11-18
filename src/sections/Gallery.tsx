@@ -199,7 +199,7 @@ export default function GallerySection() {
         <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:items-end sm:gap-6 sm:text-left">
           <div className="max-w-2xl space-y-2 sm:space-y-4">
             <h2 className="text-3xl font-black uppercase sm:text-5xl lg:text-6xl comic-shadow-light">
-              Tygo Sketchbook
+              ART GALLERY
             </h2>
             <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-black/70 sm:text-sm sm:tracking-[0.2em] lg:text-base">
               ART DROPS, ANIMATION FRAMES, AND JUNGLE VISUALS THAT IGNITE EVERY FEED.

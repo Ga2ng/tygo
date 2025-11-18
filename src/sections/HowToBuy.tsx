@@ -47,7 +47,7 @@ export function HowToBuySection() {
             <Image src="/images/logo.jpg" alt="Logo" width={16} height={16} className="h-4 w-4 rounded-full object-cover" /> HOW TO BUY $TYGO
           </span>
           <h2 className="text-3xl font-black uppercase max-[360px]:text-2xl sm:text-4xl lg:text-6xl comic-shadow-light">
-            Step into the Jungle in Minutes
+            HOW TO BUY $TYGO
           </h2>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/80 sm:text-sm lg:text-base">
             FAST, FUN, AND SOLANA-SLICK.
@@ -64,7 +64,7 @@ export function HowToBuySection() {
                 {step.icon ? step.icon : index + 1}
               </span>
               <div className="space-y-2">
-                <h3 className="text-base font-black uppercase tracking-[0.15em] sm:text-xl max-[360px]:text-sm">{step.title}</h3>
+                <h3 style={{ textShadow: 'none' }} className="text-base font-black uppercase tracking-[0.15em] sm:text-xl max-[360px]:text-sm">{step.title}</h3>
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-black/70 sm:text-sm max-[360px]:text-[11px]">
                   {step.description}
                 </p>
