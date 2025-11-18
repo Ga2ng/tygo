@@ -32,9 +32,9 @@ export function Hero() {
           className="object-cover"
           unoptimized
         />
-        <div style={{padding: '0px' }} className="lg:mt-16 mt-28 sm:mt-18 md:mt-20 min-[1528px]:mt-9 relative mx-auto flex w-full max-w-[2100px] flex-col-reverse items-center justify-between gap-0 px-4 pt-4 pb-0 text-center sm:gap-4 sm:px-8 sm:pt-6 sm:pb-0 md:gap-6 lg:flex-row lg:min-h-[70vh] min-[1528px]:min-h-screen lg:items-end lg:justify-between lg:gap-12 lg:px-10 lg:pb-0 lg:text-left">
+        <div style={{padding: '0px' }} className="lg:mt-4 mt-28 sm:mt-18 md:mt-28 relative mx-auto flex w-full flex-col-reverse items-center justify-center gap-0 px-4 pt-4 pb-0 text-center sm:gap-2 sm:px-8 sm:pt-6 sm:pb-0 md:gap-0 md:max-lg:flex-col-reverse lg:flex-row lg:min-h-screen lg:items-end lg:justify-center lg:gap-[clamp(2rem,4vw,4.5rem)] lg:px-[clamp(1.5rem,4vw,4rem)] lg:pb-0 lg:text-left">
           {/* Mascot - Left Side (second on mobile, left on desktop) */}
-          <div className="flex w-full justify-center -mt-4 lg:mt-auto lg:w-auto lg:justify-start lg:self-end">
+          <div className="flex w-full justify-center -mt-4 md:-mt-4 lg:w-auto lg:justify-center lg:self-end">
             <Image
               src="/images/mascot.gif"
               alt="$TYGO mascot"
@@ -42,24 +42,24 @@ export function Hero() {
               height={900}
               unoptimized
               priority
-              className="h-auto w-[320px] sm:w-[440px] md:w-[520px] lg:w-[600px] min-[1528px]:w-[780px] xl:w-[820px]"
+              className="h-auto w-[320px] sm:w-[440px] md:w-[520px] lg:w-[clamp(700px,48vw,1200px)]"
             />
           </div>
 
           {/* Text Content - Right Side (first on mobile, right on desktop) */}
-          <div className="relative w-full max-w-xl -mb-2 lg:mb-0 lg:w-auto lg:max-w-[30rem] min-[1528px]:max-w-[34rem] lg:-translate-x-6 min-[1528px]:-translate-x-52 xl:-translate-x-10 2xl:-translate-x-16 lg:self-end min-[1528px]:mb-12">
-            <div className="relative rounded-2xl px-3 py-3 text-black sm:rounded-3xl sm:px-5 sm:py-8 lg:rounded-[28px] lg:px-6 lg:py-12 ">
+          <div className="relative w-full max-w-xl -mb-2 md:-mb-2 lg:w-auto lg:max-w-[clamp(28rem,32vw,38rem)] lg:-translate-x-[clamp(1.5rem,8vw,4.5rem)] lg:self-end lg:mb-12">
+            <div className="relative rounded-2xl px-3 py-3 text-black sm:rounded-2xl sm:px-4 sm:py-4 md:rounded-2xl md:px-3 md:py-3 lg:rounded-[28px] lg:px-6 lg:py-12 ">
               <h1
-                className="space-y-0 font-black leading-[0.94] sm:space-y-2 comic-shadow-light"
+                className="space-y-0 font-black leading-[0.94] sm:space-y-0 md:space-y-0 lg:space-y-2 comic-shadow-light"
                 // className="space-y-1 font-black leading-[0.94] drop-shadow-[6px_6px_0_rgba(0,0,0,0.45)] sm:space-y-2 sm:drop-shadow-[9px_9px_0_rgba(0,0,0,0.45)] comic-shadow-light"
                 style={{ fontSize: "clamp(3.5rem, 12vw, 8.4rem)", letterSpacing: "0.045em" }}
               >
                 <span className="block">TYGO</span>
               </h1>
-              <p className="mt-1.5 text-center text-base font-black leading-tight text-[#000] readable-contrast sm:mt-4 sm:leading-relaxed sm:text-base md:text-lg lg:mt-5 lg:text-left lg:text-[1.25rem] xl:text-[1.55rem]">
+              <p className="mt-1.5 text-center text-base font-black leading-tight text-[#000] readable-contrast sm:mt-1.5 sm:leading-tight md:mt-1.5 md:leading-tight md:text-base lg:mt-5 lg:text-left lg:text-[1.25rem] lg:leading-relaxed xl:text-[1.55rem]">
                 WILD DEGEN BORN IN THE CRYPTO JUNGLE
               </p>
-              <div className="mt-3 space-y-6 sm:mt-6 sm:space-y-4">
+              <div className="mt-3 space-y-6 sm:mt-3 sm:space-y-6 md:mt-3 md:space-y-6 lg:mt-6 lg:space-y-4">
                 <div className="flex justify-center lg:justify-start">
                   <a
                     href="https://pump.fun"
@@ -70,7 +70,7 @@ export function Hero() {
                     Buy $TYGO
                   </a>
                 </div>
-                <div className="mt-4 flex items-center justify-center gap-2 sm:mt-6 sm:gap-3 lg:justify-start">
+                <div className="mt-4 flex items-center justify-center gap-2 sm:mt-4 sm:gap-2 md:mt-4 md:gap-2 lg:mt-6 lg:gap-3 lg:justify-start">
                   {socials.map(({ name, href, icon: Icon }) => (
                     <Link
                       key={name}
